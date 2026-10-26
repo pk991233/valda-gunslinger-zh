@@ -1,0 +1,2369 @@
+[
+  {
+    "_id": "95fb0dbb70f8505b",
+    "name": "銃士 Gunslinger",
+    "type": "class",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger",
+      "description": {
+        "value": "<p>敏捷主屬性；d8 生命骰。以此頁的 2024 修訂內容為準。起始裝備請依原文二選一；不自動加入金錢或裝備。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {
+        "9d2634bd468e77cf": {
+          "_id": "9d2634bd468e77cf",
+          "type": "HitPoints",
+          "level": 0,
+          "title": "生命值",
+          "configuration": {},
+          "value": {}
+        },
+        "59c1db9dcd9cecfa": {
+          "_id": "59c1db9dcd9cecfa",
+          "type": "Trait",
+          "level": 1,
+          "title": "豁免熟練",
+          "configuration": {
+            "grants": [
+              "saves:dex",
+              "saves:cha"
+            ],
+            "choices": [],
+            "mode": "default"
+          },
+          "value": {},
+          "classRestriction": "primary"
+        },
+        "f7d9a97ca6a4a353": {
+          "_id": "f7d9a97ca6a4a353",
+          "type": "Trait",
+          "level": 1,
+          "title": "技能（選二）",
+          "configuration": {
+            "grants": [],
+            "choices": [
+              {
+                "count": 2,
+                "pool": [
+                  "skills:acr",
+                  "skills:ani",
+                  "skills:ath",
+                  "skills:dec",
+                  "skills:ins",
+                  "skills:itm",
+                  "skills:prc",
+                  "skills:per",
+                  "skills:slt",
+                  "skills:ste"
+                ]
+              }
+            ],
+            "mode": "default"
+          },
+          "value": {},
+          "classRestriction": "primary"
+        },
+        "3b46bb6f80c67328": {
+          "_id": "3b46bb6f80c67328",
+          "type": "Trait",
+          "level": 1,
+          "title": "輕甲與簡易武器",
+          "configuration": {
+            "grants": [
+              "armor:lgt",
+              "weapon:sim"
+            ],
+            "choices": [],
+            "mode": "default"
+          },
+          "value": {},
+          "classRestriction": "primary"
+        },
+        "199737d98df50dcd": {
+          "_id": "199737d98df50dcd",
+          "type": "Trait",
+          "level": 1,
+          "title": "軍用遠程武器",
+          "configuration": {
+            "grants": [
+              "weapon:mar:blowgun",
+              "weapon:mar:handcrossbow",
+              "weapon:mar:heavycrossbow",
+              "weapon:mar:longbow",
+              "weapon:mar:musket",
+              "weapon:mar:pistol"
+            ],
+            "choices": [],
+            "mode": "default"
+          },
+          "value": {}
+        },
+        "494293e6aeeb5fa8": {
+          "_id": "494293e6aeeb5fa8",
+          "type": "Trait",
+          "level": 1,
+          "title": "武器精通 1",
+          "configuration": {
+            "grants": [],
+            "choices": [
+              {
+                "count": 2,
+                "pool": [
+                  "weapon:sim:*",
+                  "weapon:mar:blowgun",
+                  "weapon:mar:handcrossbow",
+                  "weapon:mar:heavycrossbow",
+                  "weapon:mar:longbow",
+                  "weapon:mar:musket",
+                  "weapon:mar:pistol"
+                ]
+              }
+            ],
+            "mode": "mastery",
+            "allowReplacements": false
+          },
+          "value": {}
+        },
+        "16a5583f48189872": {
+          "_id": "16a5583f48189872",
+          "type": "Trait",
+          "level": 4,
+          "title": "武器精通 4",
+          "configuration": {
+            "grants": [],
+            "choices": [
+              {
+                "count": 1,
+                "pool": [
+                  "weapon:sim:*",
+                  "weapon:mar:blowgun",
+                  "weapon:mar:handcrossbow",
+                  "weapon:mar:heavycrossbow",
+                  "weapon:mar:longbow",
+                  "weapon:mar:musket",
+                  "weapon:mar:pistol"
+                ]
+              }
+            ],
+            "mode": "mastery",
+            "allowReplacements": false
+          },
+          "value": {}
+        },
+        "77f4dc77e706355a": {
+          "_id": "77f4dc77e706355a",
+          "type": "Trait",
+          "level": 10,
+          "title": "武器精通 10",
+          "configuration": {
+            "grants": [],
+            "choices": [
+              {
+                "count": 1,
+                "pool": [
+                  "weapon:sim:*",
+                  "weapon:mar:blowgun",
+                  "weapon:mar:handcrossbow",
+                  "weapon:mar:heavycrossbow",
+                  "weapon:mar:longbow",
+                  "weapon:mar:musket",
+                  "weapon:mar:pistol"
+                ]
+              }
+            ],
+            "mode": "mastery",
+            "allowReplacements": false
+          },
+          "value": {}
+        },
+        "039027b0fdd1401b": {
+          "_id": "039027b0fdd1401b",
+          "type": "ScaleValue",
+          "level": 0,
+          "title": "風險骰面數",
+          "configuration": {
+            "identifier": "risk-die",
+            "type": "dice",
+            "scale": {
+              "2": {
+                "number": 1,
+                "faces": 8
+              },
+              "10": {
+                "number": 1,
+                "faces": 10
+              },
+              "18": {
+                "number": 1,
+                "faces": 12
+              }
+            }
+          },
+          "value": {}
+        },
+        "696d6594ca3c813a": {
+          "_id": "696d6594ca3c813a",
+          "type": "ScaleValue",
+          "level": 0,
+          "title": "風險骰上限",
+          "configuration": {
+            "identifier": "risk-max",
+            "type": "number",
+            "scale": {
+              "2": {
+                "value": 4
+              },
+              "6": {
+                "value": 5
+              },
+              "14": {
+                "value": 6
+              }
+            }
+          },
+          "value": {}
+        },
+        "ad7fb109304f1f0a": {
+          "_id": "ad7fb109304f1f0a",
+          "type": "ScaleValue",
+          "level": 0,
+          "title": "遠程武器重擊門檻",
+          "configuration": {
+            "identifier": "critical",
+            "type": "number",
+            "scale": {
+              "1": {
+                "value": 20
+              },
+              "2": {
+                "value": 19
+              },
+              "9": {
+                "value": 18
+              },
+              "17": {
+                "value": 17
+              }
+            }
+          },
+          "value": {}
+        },
+        "5c7f64a12a46bba3": {
+          "_id": "5c7f64a12a46bba3",
+          "type": "ScaleValue",
+          "level": 0,
+          "title": "斬盡殺絕啟用",
+          "configuration": {
+            "identifier": "overkill",
+            "type": "number",
+            "scale": {
+              "1": {
+                "value": 0
+              },
+              "11": {
+                "value": 1
+              }
+            }
+          },
+          "value": {}
+        },
+        "1d53d8b9b4c37be7": {
+          "_id": "1d53d8b9b4c37be7",
+          "type": "AbilityScoreImprovement",
+          "level": 4,
+          "title": "屬性值提升／專長",
+          "configuration": {
+            "points": 2,
+            "cap": 2,
+            "max": 20,
+            "fixed": {},
+            "locked": []
+          },
+          "value": {}
+        },
+        "7e86add42928e50a": {
+          "_id": "7e86add42928e50a",
+          "type": "AbilityScoreImprovement",
+          "level": 8,
+          "title": "屬性值提升／專長",
+          "configuration": {
+            "points": 2,
+            "cap": 2,
+            "max": 20,
+            "fixed": {},
+            "locked": []
+          },
+          "value": {}
+        },
+        "0336ac108db5bec8": {
+          "_id": "0336ac108db5bec8",
+          "type": "AbilityScoreImprovement",
+          "level": 12,
+          "title": "屬性值提升／專長",
+          "configuration": {
+            "points": 2,
+            "cap": 2,
+            "max": 20,
+            "fixed": {},
+            "locked": []
+          },
+          "value": {}
+        },
+        "e824a6b8f20ce2c3": {
+          "_id": "e824a6b8f20ce2c3",
+          "type": "AbilityScoreImprovement",
+          "level": 16,
+          "title": "屬性值提升／專長",
+          "configuration": {
+            "points": 2,
+            "cap": 2,
+            "max": 20,
+            "fixed": {},
+            "locked": []
+          },
+          "value": {}
+        },
+        "b543e429817cdebe": {
+          "_id": "b543e429817cdebe",
+          "type": "AbilityScoreImprovement",
+          "level": 19,
+          "title": "傳奇恩惠（選專長）",
+          "configuration": {
+            "points": 0,
+            "cap": 2,
+            "max": 30,
+            "fixed": {},
+            "locked": []
+          },
+          "value": {}
+        },
+        "fb14041d8eb69d07": {
+          "_id": "fb14041d8eb69d07",
+          "type": "ItemGrant",
+          "level": 1,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.cda269bf542320f4",
+                "optional": false
+              },
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.dafc8f5ba9cd5262",
+                "optional": false
+              },
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.f73e4750bf4149bc",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "c6dda4cef3e29285": {
+          "_id": "c6dda4cef3e29285",
+          "type": "ItemGrant",
+          "level": 2,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.69108a5597ed55f2",
+                "optional": false
+              },
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.cdccc0e30d1a6094",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "15910f7da496087e": {
+          "_id": "15910f7da496087e",
+          "type": "ItemGrant",
+          "level": 3,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.bc16f17a7d53158d",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "c9a626446dd97e7e": {
+          "_id": "c9a626446dd97e7e",
+          "type": "ItemGrant",
+          "level": 5,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.3f8c1d616d856d49",
+                "optional": false
+              },
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.257b4ddd17b8a6a4",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "443e33b1ff6a89b3": {
+          "_id": "443e33b1ff6a89b3",
+          "type": "ItemGrant",
+          "level": 7,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.7bff1a5224e88575",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "78adf14f0e37ad47": {
+          "_id": "78adf14f0e37ad47",
+          "type": "ItemGrant",
+          "level": 11,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.bad9d27fba3e551d",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "42897289448e7133": {
+          "_id": "42897289448e7133",
+          "type": "ItemGrant",
+          "level": 13,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.a2c614982cb751b3",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "9ff359e669504ecc": {
+          "_id": "9ff359e669504ecc",
+          "type": "ItemGrant",
+          "level": 15,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.0a2a630e3f3ba8ae",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "9b12ccc52fd01612": {
+          "_id": "9b12ccc52fd01612",
+          "type": "ItemGrant",
+          "level": 18,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.93e0a5f227ec954e",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "e8ce7f5c81d38665": {
+          "_id": "e8ce7f5c81d38665",
+          "type": "ItemGrant",
+          "level": 20,
+          "title": "職業特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.9108bda9ad85cc0d",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        }
+      },
+      "levels": 1,
+      "hd": {
+        "denomination": "d8",
+        "spent": 0,
+        "additional": ""
+      },
+      "primaryAbility": {
+        "value": [
+          "dex"
+        ],
+        "all": true
+      },
+      "spellcasting": {
+        "progression": "none",
+        "ability": "",
+        "preparation": {
+          "formula": ""
+        }
+      }
+    }
+  },
+  {
+    "_id": "cda269bf542320f4",
+    "name": "戰鬥風格",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-fighting-style"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-fighting-style",
+      "description": {
+        "value": "<p>手動加入一項戰鬥風格專長；遠程武器適用範圍及升級更換依原文。不要另加第二份相同加值。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "dafc8f5ba9cd5262",
+    "name": "快速拔槍",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [
+      {
+        "_id": "cf6833c47af95a03",
+        "name": "快速拔槍：先攻優勢",
+        "img": "icons/svg/target.svg",
+        "transfer": true,
+        "disabled": false,
+        "changes": [
+          {
+            "key": "system.attributes.init.roll.mode",
+            "mode": 2,
+            "value": "1",
+            "priority": 20
+          }
+        ]
+      }
+    ],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-quick-draw"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-quick-draw",
+      "description": {
+        "value": "<p>先攻優勢；可同時收拔兩把非雙手武器。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "f73e4750bf4149bc",
+    "name": "武器精通",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-weapon-mastery"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-weapon-mastery",
+      "description": {
+        "value": "<p>精通數量：1級2種／4級3種／10級4種。長休可更換一種；自訂槍械請手動配置對應精通。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "69108a5597ed55f2",
+    "name": "奪命重彈",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-critical-shot"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-critical-shot",
+      "description": {
+        "value": "<p>遠程武器重擊：2級19+／9級18+／17級17+。模組於擲骰時套用，近戰與法術攻擊不套用。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "cdccc0e30d1a6094",
+    "name": "風險骰",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-risk"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-risk",
+      "description": {
+        "value": "<p>戰技共享此資源；短休／長休回滿。戰技DC：8＋敏捷調整值＋熟練加值。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {
+        "7a2d7bf64a094e14": {
+          "_id": "7a2d7bf64a094e14",
+          "type": "heal",
+          "name": "咬緊牙關",
+          "activation": {
+            "type": "bonus",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [
+              {
+                "type": "itemUses",
+                "target": "",
+                "value": "1"
+              }
+            ],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 1
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "healing": {
+            "custom": {
+              "enabled": true,
+              "formula": "@scale.gunslinger.risk-die + @classes.gunslinger.levels"
+            },
+            "types": [
+              "temphp"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": 1
+            }
+          }
+        },
+        "2c78a6824b6f2be3": {
+          "_id": "2c78a6824b6f2be3",
+          "type": "utility",
+          "name": "盲射",
+          "activation": {
+            "type": "bonus",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [
+              {
+                "type": "itemUses",
+                "target": "",
+                "value": "1"
+              }
+            ],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": "30呎盲視，至本回合結束；手動管理感官與期限。"
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 1
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "",
+            "name": "盲射",
+            "prompt": false,
+            "visible": true
+          }
+        },
+        "74d10c5bf89137a2": {
+          "_id": "74d10c5bf89137a2",
+          "type": "utility",
+          "name": "翻滾閃避",
+          "activation": {
+            "type": "bonus",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [
+              {
+                "type": "itemUses",
+                "target": "",
+                "value": "1"
+              }
+            ],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": "移動至多15呎並換彈；此移動忽略困難地形、不觸發借機。手動移動及換彈。"
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 1
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "",
+            "name": "翻滾閃避",
+            "prompt": false,
+            "visible": true
+          }
+        },
+        "75006ab81cb8e490": {
+          "_id": "75006ab81cb8e490",
+          "type": "utility",
+          "name": "擦掠彈",
+          "activation": {
+            "type": "special",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [
+              {
+                "type": "itemUses",
+                "target": "",
+                "value": "1"
+              }
+            ],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": "遠程武器失手後，每回合一次。依原武器傷害類型手動套用；不加入一般傷害加值。"
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 1
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "@scale.gunslinger.risk-die + max(1, @abilities.dex.mod)",
+            "name": "擦掠彈",
+            "prompt": false,
+            "visible": true
+          }
+        },
+        "2266b00d697985c3": {
+          "_id": "2266b00d697985c3",
+          "type": "utility",
+          "name": "牛仔精神",
+          "activation": {
+            "type": "special",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [
+              {
+                "type": "itemUses",
+                "target": "",
+                "value": "1"
+              }
+            ],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": "智力／感知／魅力檢定或豁免失敗後，加到原結果；每回合一次。"
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 1
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "@scale.gunslinger.risk-die",
+            "name": "牛仔精神",
+            "prompt": false,
+            "visible": true
+          }
+        },
+        "809086e7d668a0b4": {
+          "_id": "809086e7d668a0b4",
+          "type": "utility",
+          "name": "千鈞一髮",
+          "activation": {
+            "type": "reaction",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [
+              {
+                "type": "itemUses",
+                "target": "",
+                "value": "1"
+              }
+            ],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": "可見敵人攻擊命中時，僅對該次攻擊增加等量AC；手動判定是否改為失手。"
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 1
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "@scale.gunslinger.risk-die",
+            "name": "千鈞一髮",
+            "prompt": false,
+            "visible": true
+          }
+        },
+        "811a054f3218f747": {
+          "_id": "811a054f3218f747",
+          "type": "utility",
+          "name": "戰技豁免DC",
+          "activation": {
+            "type": "special",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 0
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "8 + @abilities.dex.mod + @prof",
+            "name": "戰技豁免DC",
+            "prompt": false,
+            "visible": true
+          }
+        },
+        "076c230256fc6db4": {
+          "_id": "076c230256fc6db4",
+          "type": "utility",
+          "name": "極險決策：恢復1骰",
+          "activation": {
+            "type": "special",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": "僅在擲先攻或造成重擊後按一次；模組不自動偵測觸發。"
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "restoreRisk": true
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "",
+            "name": "極險決策：恢復1骰",
+            "prompt": false,
+            "visible": true
+          },
+          "visibility": {
+            "identifier": "gunslinger",
+            "level": {
+              "min": 15,
+              "max": null
+            }
+          }
+        }
+      },
+      "uses": {
+        "spent": 0,
+        "max": "@scale.gunslinger.risk-max",
+        "recovery": [
+          {
+            "period": "sr",
+            "type": "recoverAll"
+          },
+          {
+            "period": "lr",
+            "type": "recoverAll"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_id": "bc16f17a7d53158d",
+    "name": "銃士子職",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-subclass"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-subclass",
+      "description": {
+        "value": "<p>3級時，從彙編拖入「魔彈客」。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "3f8c1d616d856d49",
+    "name": "額外攻擊",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-extra-attack"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-extra-attack",
+      "description": {
+        "value": "<p>攻擊動作：2次攻擊。由玩家執行第二次攻擊。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "257b4ddd17b8a6a4",
+    "name": "破臟彈",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-gut-shot"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-gut-shot",
+      "description": {
+        "value": "<p>遠程武器重擊、目標大型以下：速度×0.5，攻擊劣勢，至多1分鐘；以一次攻擊移除。手動套用／移除。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "7bff1a5224e88575",
+    "name": "反射閃避",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-evasion"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-evasion",
+      "description": {
+        "value": "<p>適用的敏捷半傷豁免：成功0傷／失敗半傷；失能時不適用。手動處理傷害。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "bad9d27fba3e551d",
+    "name": "斬盡殺絕",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-overkill"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-overkill",
+      "description": {
+        "value": "<p>遠程武器傷害未含屬性調整：加回該調整；已含：額外1d8原類型傷害。手指槍已自動加入智力，其餘武器請調整傷害設定。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {
+        "dd01c4fb762c7d1b": {
+          "_id": "dd01c4fb762c7d1b",
+          "type": "utility",
+          "name": "已含屬性：額外1d8（手動套用）",
+          "activation": {
+            "type": "special",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 0
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "1d8",
+            "name": "已含屬性：額外1d8（手動套用）",
+            "prompt": false,
+            "visible": true
+          }
+        }
+      },
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "a2c614982cb751b3",
+    "name": "死亡欺詐",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-death-cheat"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-death-cheat",
+      "description": {
+        "value": "<p>降至0且非立即死亡時，改為1，再恢復銃士等級的HP。先手動將HP設為1，再使用治療活動。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {
+        "8c7bacfb18e9f005": {
+          "_id": "8c7bacfb18e9f005",
+          "type": "heal",
+          "name": "恢復銃士等級HP",
+          "activation": {
+            "type": "special",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [
+              {
+                "type": "itemUses",
+                "target": "",
+                "value": "1"
+              }
+            ],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 0
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "healing": {
+            "custom": {
+              "enabled": true,
+              "formula": "@classes.gunslinger.levels"
+            },
+            "types": [
+              "healing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": 1
+            }
+          }
+        }
+      },
+      "uses": {
+        "spent": 0,
+        "max": "1",
+        "recovery": [
+          {
+            "period": "sr",
+            "type": "recoverAll"
+          },
+          {
+            "period": "lr",
+            "type": "recoverAll"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_id": "0a2a630e3f3ba8ae",
+    "name": "極險決策",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-dire-gambit"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-dire-gambit",
+      "description": {
+        "value": "<p>擲先攻／造成重擊：恢復1枚風險骰（不超過上限）。使用「風險骰」內的恢復按鈕。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "93e0a5f227ec954e",
+    "name": "靈巧戰技",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-deft-maneuver"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-deft-maneuver",
+      "description": {
+        "value": "<p>自己每回合額外一次僅供戰技使用的附贈動作；手動追蹤。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "9108bda9ad85cc0d",
+    "name": "爆頭",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "gunslinger-headshot"
+      }
+    },
+    "system": {
+      "identifier": "gunslinger-headshot",
+      "description": {
+        "value": "<p>遠程武器重擊後選用：目標HP≤100即死亡；否則追加10d10原傷害類型。手動判定死亡及傷害。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%93%B3%E5%A3%AB%E8%81%8C%E4%B8%9A.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {
+        "5c7e245821f0b1f6": {
+          "_id": "5c7e245821f0b1f6",
+          "type": "utility",
+          "name": "爆頭：使用並擲追加傷害",
+          "activation": {
+            "type": "special",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [
+              {
+                "type": "itemUses",
+                "target": "",
+                "value": "1"
+              }
+            ],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 0
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "10d10",
+            "name": "爆頭：使用並擲追加傷害",
+            "prompt": false,
+            "visible": true
+          }
+        },
+        "4c1c517d72be0e09": {
+          "_id": "4c1c517d72be0e09",
+          "type": "utility",
+          "name": "消耗3風險骰重置爆頭",
+          "activation": {
+            "type": "special",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 3,
+              "resetHeadshot": true
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "",
+            "name": "消耗3風險骰重置爆頭",
+            "prompt": false,
+            "visible": true
+          }
+        }
+      },
+      "uses": {
+        "spent": 0,
+        "max": "1",
+        "recovery": [
+          {
+            "period": "sr",
+            "type": "recoverAll"
+          },
+          {
+            "period": "lr",
+            "type": "recoverAll"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_id": "c34928c3c4608378",
+    "name": "魔彈客 Spellslinger",
+    "type": "subclass",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "spellslinger"
+      }
+    },
+    "system": {
+      "identifier": "spellslinger",
+      "description": {
+        "value": "<p>智力施法；三分之一施法者。法術選自法師列表；準備數量依表，不等於每天自由換法術。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%AD%94%E5%BC%B9%E5%AE%A2.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {
+        "625eac719b485c38": {
+          "_id": "625eac719b485c38",
+          "type": "ScaleValue",
+          "level": 0,
+          "title": "準備法術數量",
+          "configuration": {
+            "identifier": "prepared",
+            "type": "number",
+            "scale": {
+              "3": {
+                "value": 3
+              },
+              "4": {
+                "value": 4
+              },
+              "7": {
+                "value": 5
+              },
+              "8": {
+                "value": 6
+              },
+              "10": {
+                "value": 7
+              },
+              "11": {
+                "value": 8
+              },
+              "13": {
+                "value": 9
+              },
+              "14": {
+                "value": 10
+              },
+              "16": {
+                "value": 11
+              },
+              "19": {
+                "value": 12
+              },
+              "20": {
+                "value": 13
+              }
+            }
+          },
+          "value": {}
+        },
+        "5b065e9fac8936ea": {
+          "_id": "5b065e9fac8936ea",
+          "type": "ScaleValue",
+          "level": 0,
+          "title": "自選法師戲法數量",
+          "configuration": {
+            "identifier": "cantrips",
+            "type": "number",
+            "scale": {
+              "3": {
+                "value": 2
+              },
+              "10": {
+                "value": 3
+              }
+            }
+          },
+          "value": {}
+        },
+        "701f750b7678b200": {
+          "_id": "701f750b7678b200",
+          "type": "ItemGrant",
+          "level": 3,
+          "title": "魔彈客特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.611d580f2b1cca46",
+                "optional": false
+              },
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.a410dfe79ca4760d",
+                "optional": false
+              },
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.6ce426c77942f4a1",
+                "optional": false
+              },
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.4c0def7f37626e2b",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "7dd13a8d7b02e98b": {
+          "_id": "7dd13a8d7b02e98b",
+          "type": "ItemGrant",
+          "level": 6,
+          "title": "魔彈客特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.86e6537ff83d8a28",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "f45ebcc218e56e2e": {
+          "_id": "f45ebcc218e56e2e",
+          "type": "ItemGrant",
+          "level": 10,
+          "title": "魔彈客特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.6b3f47d02fed8ad1",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        },
+        "815c7578726ba7e9": {
+          "_id": "815c7578726ba7e9",
+          "type": "ItemGrant",
+          "level": 14,
+          "title": "魔彈客特性",
+          "configuration": {
+            "items": [
+              {
+                "uuid": "Compendium.world.valda-gunslinger-zh.Item.7cf7e4f0c0a8098e",
+                "optional": false
+              }
+            ],
+            "optional": false,
+            "spell": null
+          },
+          "value": {}
+        }
+      },
+      "classIdentifier": "gunslinger",
+      "spellcasting": {
+        "progression": "third",
+        "ability": "int",
+        "preparation": {
+          "formula": "@scale.spellslinger.prepared"
+        }
+      }
+    }
+  },
+  {
+    "_id": "611d580f2b1cca46",
+    "name": "魔彈客施法",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "spellslinger-spellcasting"
+      }
+    },
+    "system": {
+      "identifier": "spellslinger-spellcasting",
+      "description": {
+        "value": "<p>3級自選2道法師戲法＋3道一環法術；10級自選戲法增至3道。每銃士升級可各換一道戲法及準備法術。遠程武器／奧術法器可作法器；手指槍另外習得。法術請從你已有的彙編拖入並選智力。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%AD%94%E5%BC%B9%E5%AE%A2.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "a410dfe79ca4760d",
+    "name": "砰！你已經死了",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "spellslinger-bang"
+      }
+    },
+    "system": {
+      "identifier": "spellslinger-bang",
+      "description": {
+        "value": "<p>另獲手指槍。該武器命中後，可用附贈動作消耗1枚風險骰，將骰值加入此次傷害。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%AD%94%E5%BC%B9%E5%AE%A2.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {
+        "b5ef50251fd11e62": {
+          "_id": "b5ef50251fd11e62",
+          "type": "damage",
+          "name": "奧術射擊：追加力場傷害",
+          "activation": {
+            "type": "bonus",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 1
+            }
+          },
+          "range": {
+            "units": "any",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "creature",
+              "count": "1"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "damage": {
+            "critical": {
+              "allow": true,
+              "bonus": ""
+            },
+            "parts": [
+              {
+                "custom": {
+                  "enabled": true,
+                  "formula": "@scale.gunslinger.risk-die"
+                },
+                "types": [
+                  "force"
+                ],
+                "scaling": {
+                  "mode": "",
+                  "number": 1
+                }
+              }
+            ]
+          }
+        }
+      },
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "86e6537ff83d8a28",
+    "name": "法術射擊",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "spellslinger-spellshot"
+      }
+    },
+    "system": {
+      "identifier": "spellslinger-spellshot",
+      "description": {
+        "value": "<p>攻擊動作中，可用一道施法時間為動作的法師戲法，替換其中一次攻擊。手動執行。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%AD%94%E5%BC%B9%E5%AE%A2.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {},
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "6b3f47d02fed8ad1",
+    "name": "施法反制",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "spellslinger-counter-mage"
+      }
+    },
+    "system": {
+      "identifier": "spellslinger-counter-mage",
+      "description": {
+        "value": "<p>遠程攻擊期間：依原文忽略目標防護法術與魔法物品、禁止針對該次攻擊的反應施法。反魔法破臟彈：禁施法／魔法動作、維持專注劣勢。由DM裁定，不修改目標資料。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%AD%94%E5%BC%B9%E5%AE%A2.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {
+        "9ad8109b929693d8": {
+          "_id": "9ad8109b929693d8",
+          "type": "utility",
+          "name": "魔法適性：失敗豁免＋1d6",
+          "activation": {
+            "type": "reaction",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": "僅對抗法術／魔法效應時使用；手動加到原豁免結果。"
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 0
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "1d6",
+            "name": "魔法適性：失敗豁免＋1d6",
+            "prompt": false,
+            "visible": true
+          }
+        }
+      },
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "7cf7e4f0c0a8098e",
+    "name": "魔彈【戰技】",
+    "type": "feat",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "spellslinger-magic-bullet"
+      }
+    },
+    "system": {
+      "identifier": "spellslinger-magic-bullet",
+      "description": {
+        "value": "<p>法術攻擊時：附贈動作＋1風險骰，改以遠程武器攻擊，骰值加命中。命中時同時結算法術及武器正常傷害。不要另外再擲一次法術攻擊。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E9%AD%94%E5%BC%B9%E5%AE%A2.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "activities": {
+        "1e4e5f03301a9675": {
+          "_id": "1e4e5f03301a9675",
+          "type": "utility",
+          "name": "魔彈：擲命中加值",
+          "activation": {
+            "type": "bonus",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 1
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "@scale.gunslinger.risk-die",
+            "name": "魔彈：擲命中加值",
+            "prompt": false,
+            "visible": true
+          }
+        }
+      },
+      "uses": {
+        "spent": 0,
+        "max": "",
+        "recovery": []
+      }
+    }
+  },
+  {
+    "_id": "6ce426c77942f4a1",
+    "name": "手指槍 Finger Guns",
+    "type": "spell",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "spellslinger-finger-guns"
+      }
+    },
+    "system": {
+      "identifier": "spellslinger-finger-guns",
+      "description": {
+        "value": "<p>附贈動作施法，1分鐘，無專注。之後使用另附的「手指槍（武器）」攻擊；施法本身不額外贈送攻擊。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E6%B3%95%E6%9C%AF.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "level": 0,
+      "school": "evo",
+      "ability": "int",
+      "properties": [
+        "vocal",
+        "somatic"
+      ],
+      "method": "spell",
+      "prepared": 1,
+      "sourceItem": "spellslinger",
+      "activation": {
+        "type": "bonus",
+        "value": 1
+      },
+      "duration": {
+        "value": "1",
+        "units": "minute"
+      },
+      "range": {
+        "units": "self"
+      },
+      "target": {
+        "affects": {
+          "type": "self"
+        }
+      },
+      "activities": {
+        "b6bac3c752ef4e09": {
+          "_id": "b6bac3c752ef4e09",
+          "type": "utility",
+          "name": "施展手指槍",
+          "activation": {
+            "type": "bonus",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": "啟用手指槍武器1分鐘；到期後停止使用。"
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 0
+            }
+          },
+          "range": {
+            "units": "self",
+            "override": true
+          },
+          "target": {
+            "affects": {
+              "type": "self"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "roll": {
+            "formula": "",
+            "name": "施展手指槍",
+            "prompt": false,
+            "visible": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "_id": "4c0def7f37626e2b",
+    "name": "手指槍（武器）",
+    "type": "weapon",
+    "img": "icons/svg/target.svg",
+    "effects": [],
+    "flags": {
+      "valda-gunslinger-zh": {
+        "key": "spellslinger-finger-weapon"
+      }
+    },
+    "system": {
+      "identifier": "spellslinger-finger-weapon",
+      "description": {
+        "value": "<p>僅在手指槍法術持續期間使用。智力命中、2d6力場，不加屬性傷害；銃士11級後斬盡殺絕改加智力。射程按角色總等級成長；緩速精通需DM依原文註記裁定。</p><p><a href=\"https://5echm.kagangtuya.top/?page=%E7%AC%AC%E4%B8%89%E6%96%B9%2F%E7%93%A6%E5%B0%94%E8%BE%BE%E7%9A%84%E7%A7%98%E5%AF%86%E5%B0%96%E5%A1%94%2F%E9%93%B3%E5%A3%AB%2F%E6%B3%95%E6%9C%AF.htm\">規則來源（完整說明）</a></p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Valda — 使用者指定網頁版本",
+        "rules": "2024"
+      },
+      "advancement": {},
+      "type": {
+        "value": "simpleR",
+        "baseItem": ""
+      },
+      "quantity": 1,
+      "equipped": true,
+      "proficient": 1,
+      "properties": [
+        "mgc"
+      ],
+      "range": {
+        "value": 60,
+        "long": 240,
+        "units": "ft"
+      },
+      "damage": {
+        "base": {
+          "custom": {
+            "enabled": true,
+            "formula": "2d6"
+          },
+          "types": [
+            "force"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": 1
+          }
+        }
+      },
+      "mastery": "slow",
+      "activities": {
+        "6a79527011b0e34a": {
+          "_id": "6a79527011b0e34a",
+          "type": "attack",
+          "name": "手指槍攻擊",
+          "activation": {
+            "type": "action",
+            "value": 1,
+            "override": true
+          },
+          "consumption": {
+            "spellSlot": false,
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "description": {
+            "chatFlavor": ""
+          },
+          "flags": {
+            "valda-gunslinger-zh": {
+              "risk": 0
+            }
+          },
+          "range": {
+            "override": false
+          },
+          "target": {
+            "affects": {
+              "type": "creature",
+              "count": "1"
+            },
+            "override": true,
+            "prompt": false
+          },
+          "attack": {
+            "ability": "int",
+            "bonus": "",
+            "critical": {
+              "threshold": 20
+            },
+            "flat": false,
+            "type": {
+              "value": "ranged",
+              "classification": "weapon"
+            }
+          },
+          "damage": {
+            "includeBase": false,
+            "critical": {
+              "bonus": ""
+            },
+            "parts": [
+              {
+                "custom": {
+                  "enabled": true,
+                  "formula": "2d6 + @scale.gunslinger.overkill * @abilities.int.mod"
+                },
+                "types": [
+                  "force"
+                ],
+                "scaling": {
+                  "mode": "",
+                  "number": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+]
