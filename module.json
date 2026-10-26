@@ -2,7 +2,7 @@
   "id": "valda-gunslinger-zh",
   "title": "銃士與魔彈客（繁中）",
   "description": "FVTT 13 / D&D5e 5.3.3 職業資料與有限輔助。",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "13",
     "verified": "13.351",
@@ -31,5 +31,5 @@
   "license": "LICENSE.txt",
   "url": "https://github.com/pk991233/valda-gunslinger-zh",
   "manifest": "https://raw.githubusercontent.com/pk991233/valda-gunslinger-zh/main/module.json",
-  "download": "https://github.com/pk991233/valda-gunslinger-zh/archive/refs/tags/v1.0.0.zip"
+  "download": "https://github.com/pk991233/valda-gunslinger-zh/archive/refs/tags/v1.0.1.zip"
 }
