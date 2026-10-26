@@ -140,9 +140,70 @@ export async function checkSelected() {
   await ChatMessage.create({content:html,whisper:[game.user.id]});
 }
 
-Hooks.once('init',()=>game.settings.register(NS,'installed',{scope:'world',config:false,type:Boolean,default:false}));
+// v1.0.1 migrates only known, unedited text. Never replace whole owned Item documents.
+const TEXT_VERSION='1.0.1';
+const textPath=/^system\.(description\.(value|chat)|activities\.[a-zA-Z0-9]{16}\.(name|description\.chatFlavor))$/;
+function readPath(object,path) { return path.split('.').reduce((o,k)=>o?.get?.(k) ?? o?.[k],object); }
+export function descriptionUpdate(item,patches) {
+  const fields=patches.items?.[keyOf(item)];
+  if (!fields) return null;
+  const update={_id:item.id};
+  for (const field of fields) {
+    if (!textPath.test(field.path)) throw new Error('文字更新包含不允許的欄位。');
+    const actual=readPath(item,field.path);
+    // A deleted activity or a user-edited field must not be reconstructed or overwritten.
+    if (actual===field.before && actual!==field.after) update[field.path]=field.after;
+  }
+  return Object.keys(update).length>1 ? update : null;
+}
+let migrationPromise;
+export function migrateDescriptions() {
+  if (migrationPromise) return migrationPromise;
+  migrationPromise=migrateDescriptionsImpl().finally(()=>{migrationPromise=undefined;});
+  return migrationPromise;
+}
+async function migrateDescriptionsImpl() {
+  if (!game.user.isGM || !compatible()) throw new Error('文字更新需由GM在FVTT 13／D&D5e 5.3.3執行。');
+  const response=await fetch(`modules/${NS}/text-patches.json`);
+  if (!response.ok) throw new Error('無法讀取文字更新資料。');
+  const patches=await response.json();
+  if (patches.version!==TEXT_VERSION) throw new Error('文字更新資料版本不符。');
+  // Validate all paths before making any writes.
+  for (const fields of Object.values(patches.items)) for (const f of fields) {
+    if (!textPath.test(f.path) || typeof f.before!=='string' || typeof f.after!=='string') throw new Error('文字更新資料格式錯誤。');
+  }
+  let count=0;
+  const collect=items=>Array.from(items??[]).map(i=>descriptionUpdate(i,patches)).filter(Boolean);
+  const pack=game.packs.get(PACK);
+  if (pack) {
+    const updates=collect(await pack.getDocuments()),locked=pack.locked;
+    if(updates.length)try {
+      if(locked)await pack.configure({locked:false});
+      await Item.updateDocuments(updates,{pack:PACK,valdaSync:true});
+      count+=updates.length;
+    } finally {if(locked)await pack.configure({locked:true});}
+  }
+  const worldUpdates=collect(game.items);
+  if(worldUpdates.length){await Item.updateDocuments(worldUpdates,{valdaSync:true});count+=worldUpdates.length;}
+  const actors=new Map();
+  for(const actor of game.actors??[])actors.set(actor.uuid,actor);
+  for(const scene of game.scenes??[])for(const token of scene.tokens??[]){
+    if(!token.actorLink && token.actor)actors.set(token.actor.uuid,token.actor);
+  }
+  for(const actor of actors.values()){
+    const updates=collect(actor.items);
+    if(updates.length){await actor.updateEmbeddedDocuments('Item',updates,{valdaSync:true});count+=updates.length;}
+  }
+  await game.settings.set(NS,'textVersion',TEXT_VERSION);
+  ui.notifications.info(`銃士規則說明已更新（${count} 個項目）；自訂文字與功能設定保留。`);
+  return {version:TEXT_VERSION,updated:count};
+}
+Hooks.once('init',()=>{
+  game.settings.register(NS,'installed',{scope:'world',config:false,type:Boolean,default:false});
+  game.settings.register(NS,'textVersion',{scope:'world',config:false,type:String,default:''});
+});
 Hooks.once('ready',()=>{
-  game.modules.get(NS).api={install,syncActor,checkSelected};
+  game.modules.get(NS).api={install,syncActor,checkSelected,migrateDescriptions};
   if (!compatible()) { if(game.user.isGM)ui.notifications.warn('銃士模組僅針對 FVTT 13／D&D5e 5.3.3；輔助功能未啟動。');return; }
   Hooks.on('createItem',(item,options,userId)=>schedule(item.actor,options,userId));
   Hooks.on('updateItem',(item,_changes,options,userId)=>schedule(item.actor,options,userId));
@@ -152,6 +213,9 @@ Hooks.once('ready',()=>{
   Hooks.on('dnd5e.preUseActivity',checkResourceLink);
   Hooks.on('dnd5e.activityConsumption',resourceUpdates);
   const gm=game.users.activeGM;
+  if(game.user.isGM && (!gm || gm.id===game.user.id) && game.settings.get(NS,'installed') && game.settings.get(NS,'textVersion')!==TEXT_VERSION) {
+    migrateDescriptions().catch(e=>{console.error(NS,e);ui.notifications.error(`銃士文字更新未完成：${e.message}`);});
+  }
   if(game.user.isGM && (!gm || gm.id===game.user.id) && !game.settings.get(NS,'installed')) {
     new Dialog({title:'匯入銃士與魔彈客',content:'<p>建立此世界專用的職業彙編與檢查巨集。完成後從彙編拖入角色。既有同ID資料不覆寫。</p>',buttons:{yes:{label:'建立彙編',callback:()=>install().catch(e=>{console.error(NS,e);ui.notifications.error(e.message);})},no:{label:'稍後'}},default:'yes'}).render(true);
   }
